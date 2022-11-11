@@ -4,5 +4,4 @@ metadata:
   name: cloud-info
   namespace: {{ .Release.Namespace }}
 data:
-  key1: value1
   FEATURE_FLAG_SYSTEM: CF
