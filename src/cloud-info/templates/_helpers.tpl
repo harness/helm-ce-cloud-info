@@ -70,3 +70,8 @@ Create the name of the service account to use
 - { name: APP_DATABASE_DATASOURCE, value: "{{ printf "postgres://postgres:$(DB_PASSWORD)@postgres:5432" }}" }
 - { name: APP_DB_MIGRATION_DATASOURCE, value: "{{ printf "postgres://postgres:$(DB_PASSWORD)@postgres:5432" }}" }
 {{- end }}
+
+{{- define "cloud-info.generateMountSecrets" }}
+    gcp-creds: {{ include "common.secrets.passwords.manage" (dict "secret" "cloud-info-secret-mount" "key" "gcp-creds" "providedValues" (list "CLOUD_INFO_GCP_CREDS") "length" 10 "context" $) }}
+    config-file: {{ include "common.secrets.passwords.manage" (dict "secret" "cloud-info-secret-mount" "key" "config-file" "providedValues" (list "CLOUD_INFO_CONFIG") "length" 10 "context" $) }}
+{{- end }}
