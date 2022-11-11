@@ -54,6 +54,24 @@ spec:
           envFrom:
             - configMapRef:
                 name: cloud-info
+          env:
+            - name: key2
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.env.secrets.key2.name }}
+                  key: {{ .Values.env.secrets.key2.key }}
+          volumeMounts:
+          - name: secret-mount
+            mountPath: /config
+      volumes:
+      - name: secret-mount
+        secret:
+          secretName: ceng-secret-mount
+          items:
+          - key: gcp-creds
+            path: gcp-creds.json
+          - key: config-file
+            path: config.toml
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
