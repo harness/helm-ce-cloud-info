@@ -30,14 +30,6 @@ image:
   tag: "77300"
   digest: ""
 
-waitForInitContainer:
-  image:
-    registry: docker.io
-    repository: harness/helm-init-container
-    pullPolicy: IfNotPresent
-    tag: "latest"
-    digest: ""
-
 nameOverride: ""
 fullnameOverride: ""
 
@@ -72,12 +64,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-env:
-  secrets:
-    key2:
-      name: cloud-info-secret
-      key: key2
 
 CLOUD_INFO_GCP_CREDS: ""
 
