@@ -3,6 +3,23 @@ entries:
   cloud-info:
   - apiVersion: v2
     appVersion: 1.773.0
+    created: "2022-11-11T09:31:58.089385786Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.x.x
+    description: A Helm chart for Kubernetes
+    digest: 929ebf99259bc3642a4d5a921d44ee281e0cf120fb46533f989ca7f80bdce25a
+    name: cloud-info
+    type: application
+    urls:
+    - https://github.com/harness/helm-ce-cloud-info/releases/download/cloud-info-0.1.8/cloud-info-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 1.773.0
     created: "2022-11-11T09:25:55.920136491Z"
     dependencies:
     - name: harness-common
@@ -18,4 +35,4 @@ entries:
     urls:
     - https://github.com/harness/helm-ce-cloud-info/releases/download/cloud-info-0.1.7/cloud-info-0.1.7.tgz
     version: 0.1.7
-generated: "2022-11-11T09:25:55.920142391Z"
+generated: "2022-11-11T09:31:58.089393787Z"
