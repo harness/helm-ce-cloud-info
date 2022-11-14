@@ -24,6 +24,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
+        app: ce-cloud-info
         {{- include "cloud-info.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
