@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: cloud-info
-  namespace: {{ .Release.Namespace }}
-data:
-  FEATURE_FLAG_SYSTEM: CF
