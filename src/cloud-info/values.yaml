@@ -24,7 +24,7 @@ java:
 
 image:
   registry: docker.io
-  repository: harness/cloud-info-signed
+  repository: harness/ce-cloud-info-signed
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0.19.0"
